@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Input</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <label for="username">Tipe Text:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">Tipe Password:</label><br>
+    <input type="password" id="pwd" name="pwd"><br>
+
+    <hr>
+    <h3>Uji coba 2</h3>
+    <input type="radio" id="html" name="fav_language" value="HTML"> 
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS"> 
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript"> 
+    <label for="javascript">JavaScript</label>
+    <p>Radio button dengan name yang sama hanya bisa dipilih satu dalam satu kelompok</p>
+
+    <hr>
+    <h3>Uji coba 3</h3>
+    <input type="checkbox" id="id1" name="vehicle1" value="Bike">
+    <label for="id1"> I have a bike</label><br>
+    <input type="checkbox" id="id2" name="vehicle2" value="Car">
+    <label for="id2"> I have a car</label><br>
+    <input type="checkbox" id="id3" name="vehicle3" value="Boat">
+    <label for="id3"> I have a boat</label>
+    <p>Checkbox bisa dipilih lebih dari satu karena setiap pilihan berdiri sendiri</p>
+
+    <hr>
+    <h3>Uji coba 4</h3>
+    <label for="favcolor">Pilih Warna dengan type="color":</label>
+    <input type="color" id="favcolor" name="favcolor"><br>
+    <label for="b">Pilih tanggal dengan type="date":</label>
+    <input type="date" id="b" name="tanggal"><br>
+    <input type="button" onclick="alert('Hallo saya Ferdinand')" value="Click Me!"> <br>
+    <p>type color digunakan untuk memilih warna, type date digunakan untuk memilih tanggal, dan type button digunakan untuk menjalankan perintah ketika diklik</p>
+
+    <hr>
+    <h3>Uji coba 5</h3>
+    <label for="birthdaytime">input dengan type datetime-local:</label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+    <label for="bdaymonth">input dengan type month: </label>
+    <input type="month" id="bdaymonth" name="bdaymonth"><br>
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email"><br>
+    <p>type datetime-local digunakan untuk memilih tanggal dan waktu, type month digunakan untuk memilih bulan dan tahun, dan type email digunakan untuk memasukkan email dengan validasi format</p>
+ 
+    <hr>
+    <h3>Uji coba 6</h3>
+    <input type="image" src="gambar/icon.png" alt="Submit" width="48" height="48"><br>
+    <label for="myfile">Pilih file:</label>
+    <input type="file" id="myfile" name="myfile"><br>
+    <input type="hidden" id="custId" name="custId" value="3487"><br>
+    <p>type image digunakan sebagai tombol submit yang berbentuk gambar, type file untuk mengunggah file, dan type hidden untuk menyimpan data yang tidak ditampilkan</p>
+
+    <hr>
+    <h3>Uji coba 7</h3>
+    <label for="quantity">Quantity (between 1 and 10):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10"> <br>
+    <label for="vol">Volume (between 0 and 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50"><br>
+    <p>Type number digunakan untuk memasukkan angka dengan batas minimal dan maksimal mulai dari 1 sampai 10, sedangkan type range untuk memilih nilai dalam bentuk slider dari 0 sampai 50</p>
+
+    <hr>
+    <h3>Uji coba 8</h3>
+    <label for="homepage">Add your homepage:</label>
+    <input type="url" id="homepage" name="homepage"><br>
+    <label for="gsearch">Search Google:</label>
+    <input type="search" id="gsearch" name="gsearch"><br>
+    <label for="ph">Enter your phone number: </label>
+    <input type="tel" id="ph" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+    <p>type url digunakan untuk memasukkan alamat website, type search untuk kolom pencarian, dan type tel untuk memasukkan nomor telepon</p>
+
+    <hr>
+    <h3>Uji coba 9</h3>
+    <label for="appt">Select a time:</label>
+    <input type="time" id="appt" name="appt"><br>
+    <label for="week">Select a week: </label>
+    <input type="week" id="week" name="week"><br>
+    <p>Type time digunakan untuk memilih waktu, sedangkan type week untuk memilih minggu dalam waktu satu tahun</p>
+</body>
+</html>
