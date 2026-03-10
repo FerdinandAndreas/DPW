@@ -29,4 +29,4 @@ Untuk menunjang produktivitas, saya menggunakan:
 ### 📫 Let's Connect!
 
 - **Instagram:** (https://www.instagram.com/frrdptraa_?igsh=a21uMHp2dXB5eXBi)
-- **LinkedIn:** https://www.linkedin.com/in/ferdinand-andreas-saputra-16b87b380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+- **LinkedIn:** https://www.linkedin.com/in/ferdinand-Andreas-saputra-16b87b380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
