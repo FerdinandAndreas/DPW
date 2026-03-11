@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo Selector</title>
+
+  <style>
+    .story::first-line {
+      background-color: rgb(79, 79, 233);
+      color: white;
+      font-weight: bold;
+    }
+
+    .story::first-letter {
+      font-size: 2em;
+      color: rgb(255, 3, 3);
+      font-weight: bold;
+      float: left;
+      margin-right: 4px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo Element Selector CSS</h2>
+
+  <p class="story">
+    Suatu hari, Kancil ingin menyeberangi sungai untuk mencari makanan di seberang, namun sungai itu
+    dipenuhi banyak buaya lapar. Saat mendekati tepi sungai, Kancil melihat kawanan buaya dan langsung 
+    berteriak bahwa Raja Hutan menyuruhnya menghitung jumlah buaya karena akan diberi makanan.
+    Buaya yang rakus pun menuruti perintah Kancil dan berbaris rapi hingga ujung sungai. Dengan santai, 
+    Kancil melompat dari satu punggung buaya ke punggung lainnya sambil pura-pura menghitung. Sesampainya 
+    di seberang, Kancil tertawa dan berterima kasih karena sudah diseberangkan, membuat buaya-buaya 
+    menyesal karena telah ditipu. 
+  </p>
+
+  <h4>Kesimpulan Pseudo element</h4>
+
+  <p style="font-size: 15px;">
+    Baris pertama memiliki background biru karena menggunakan firstline,
+    dan huruf pertama juga berukuran besar berwarna merah karena menggunakan first letter.
+  </p>
+
+</body>
+</html>

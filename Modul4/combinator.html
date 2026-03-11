@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combinator Selector</title>
+  <style>
+    
+    div p {
+      color: red;
+    }
+    
+    div > p {
+      background-color: yellow;
+    }
+
+    div + p {
+      background-color: darkgray;
+    }
+
+    div ~ p {
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Combinator Selector CSS</h2>
+
+  <div>
+    
+    <p>
+      Selektor 1 : Paragraf ini berada di dalam elemen div sehingga aturan CSS div berlaku dan teks berubah menjadi merah.
+      Selektor 2 :Paragraf ini juga merupakan turunan langsung dari div sehingga aturan div > p berlaku dan background menjadi kuning
+    </p>
+
+    <p>
+       Kesimpulan selektor 1 dan 2: Paragraf kedua berada di dalam div dan juga merupakan turunan langsung dari div, sehingga kedua aturan CSS berlaku yaitu teks menjadi berwarna merah dan background menjadi kuning
+    </p>
+  </div>
+
+  <p>
+    Paragraf ini berada tepat setelah elemen div, sehingga aturan div + p berlaku dan background menjadi warna darkgray
+  </p>
+
+  <p>
+     Paragraf ini masih satu level dengan div, sehingga aturan div ~ p berlaku dan warna teks berubah menjadi cyan
+  </p>
+
+</body>
+</html>

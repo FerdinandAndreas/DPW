@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pengaturan pada link</title>
+  <style type="text/css">
+    
+    a:link {
+      text-decoration: none;
+      background-color: #FF9933;
+      color: #FFFFFF;
+    }
+
+    a:active {
+      text-decoration: none;
+      color: #660000;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #222;
+    }
+
+    a:hover {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: underline overline;
+      color: #000000;
+      background-color: #CCFF00;
+    }
+
+    table { margin: 20px 0; }
+    td { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+
+  <h2>Hyperlink </h3>
+
+  <table border="0">
+    <tr>
+      <td><a href="#">Arahkan mouse ke sini</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Arahkan mouse ke sini</a></td>
+    </tr>
+  </table>
+
+  <p style="font-size:15px; color:#555; max-width:800px;">
+    <strong> Kesimpulan:</strong><br>
+    • <code>a:link</code> → Background oranye, teks putih untuk link yang belum dikunjungi<br>
+    • <code>a:visited</code> → Teks abu gelap untuk link yang sudah dikunjungi<br>
+    • <code>a:active</code> → Untuk menampilkan warna gelap saat diklik<br>
+    • <code>a:hover</code> → Untuk membuat huruf kapital semua (text-transform: uppercase),
+      garis bawah dan atas diantara huruf (text-decoration: underline overline)    
+  </p>
+
+</body>
+</html>

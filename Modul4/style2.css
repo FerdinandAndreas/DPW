@@ -1,0 +1,20 @@
+p{
+color: #555;
+font-family: arial;
+background: #00FF00;
+font-size:"16pt";
+font-weight: bold
+}
+
+p.group{
+color: rgb(0, 21, 255);
+font-family: verdana;
+font-size:"14pt";
+font-weight: normal;
+background: #b6b6cf
+}
+
+p#one{
+color: #094509;
+background: #efff92
+}
