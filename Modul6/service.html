@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Materialize</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        nav { background-color: #0d47a1; }
+
+        .page-header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #0d47a1;
+            font-weight: bold;
+            margin: 30px 0 16px;
+            text-align: center;
+        }
+
+        /* Service Card */
+        .service-card {
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .service-icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .price-box {
+            background: #e3f2fd;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #0d47a1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a { color: #fff; margin: 0 12px; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+   <!-- ══ NAVBAR ══ -->
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <i class="material-icons">web</i> Materialize
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="about.html"><i class="material-icons left">info</i>About</a></li>
+                <li><a href="portfolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+                 <li><a href="service.html"><i class="material-icons left">build</i>Layanan</a></li>
+                <li><a href="contact.html"><i class="material-icons left">mail</i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="page-header">
+        <h2><i class="material-icons large">build</i><br>Layanan Saya</h2>
+        <p><h6>Layanan yang bisa saya kerjakan dalam bidang web</h6></p>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="container">
+        <h4 class="section-title">Apa yang Saya Tawarkan?</h4>
+
+        <div class="row">
+
+            <!-- Service 1 -->
+            <div class="col s12 m6 l4">
+                <div class="card service-card center-align hoverable">
+                    <i class="material-icons service-icon blue-text">language</i>
+                    <h5>Web Design</h5>
+                    <p>Mendesain tampilan sebuah website yang modern, menarik, dan user-friendly</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col s12 m6 l4">
+                <div class="card service-card center-align hoverable">
+                    <i class="material-icons service-icon green-text">code</i>
+                    <h5>Frontend Development</h5>
+                    <p>Membuat tampilan website menggunakan HTML, CSS, dan JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col s12 m6 l4">
+                <div class="card service-card center-align hoverable">
+                    <i class="material-icons service-icon purple-text">devices</i>
+                    <h5>Responsive Design</h5>
+                    <p>Website dapat tampil dengan baik di berbagai perangkat (HP, tablet, desktop)</p>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col s12 m6 l4">
+                <div class="card service-card center-align hoverable">
+                    <i class="material-icons service-icon red-text">dashboard</i>
+                    <h5>UI Dashboard</h5>
+                    <p>Membuat tampilan dashboard admin dengan data dan statistik</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col s12 m6 l4">
+                <div class="card service-card center-align hoverable">
+                    <i class="material-icons service-icon orange-text">brush</i>
+                    <h5>UI/UX Design</h5>
+                    <p>Mendesain pengalaman pengguna agar nyaman dan mudah digunakan</p>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="col s12 m6 l4">
+                <div class="card service-card center-align hoverable">
+                    <i class="material-icons service-icon teal-text">build_circle</i>
+                    <h5>Maintenance</h5>
+                    <p>Perbaikan dan pengembangan website agar tetap optimal dan up-to-date.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="price-box">
+        <div class="container center-align">
+            <h4 class="section-title">Estimasi Harga</h4>
+            <p>Pembuatan website terbaik mulai dari harga</p>
+            <h3 class="blue-text text-darken-2">Rp 2.500.000.000</h3>
+            <a href="contact.html" class="btn blue">Hubungi Saya</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service.html">Layanan</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+            &copy; 2025 Materialize | Dibuat dengan Materialize CSS | Ferdinand Ganteng - 253307027
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

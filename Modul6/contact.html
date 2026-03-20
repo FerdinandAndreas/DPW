@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Belajar Materialize CSS</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+
+nav { background-color: #114c66; }
+
+.page-header {
+background: linear-gradient(135deg, #07648c, #b6e5f9);
+color: white;
+padding: 20px 0;
+text-align: center;
+}
+
+.page-header h2 { font-weight: bold; }
+
+.section-title {
+color: #07648c;
+font-weight: bold;
+margin: 30px 0 16px;
+text-align: center;
+}
+
+.contact-box{
+background:#76a6a7;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.contact-box i{
+color:#16213b;
+margin-right:10px;
+}
+
+.social-icon a{
+margin:0 10px;
+color:#323e4d;
+}
+
+footer {
+background-color: #07648c;
+color: white;
+padding: 20px 0;
+text-align: center;
+}
+
+footer a { 
+color: #f4f4f4; 
+margin: 0 12px; 
+text-decoration: none; 
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="nav-wrapper container">
+
+<a href="index.html" class="brand-logo">
+<i class="material-icons">web</i> Materialize
+</a>
+
+<ul class="right hide-on-med-and-down">
+<li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+<li><a href="about.html"><i class="material-icons left">info</i>About</a></li>
+<li><a href="portfolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+ <li><a href="service.html"><i class="material-icons left">build</i>Layanan</a></li>
+<li class="active"><a href="contact.html"><i class="material-icons left">mail</i>Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<!-- HEADER -->
+<div class="page-header">
+<h2><i class="material-icons large">mail</i><br>Contact</h2>
+<p><h6>Hubungi saya untuk kerja sama atau pertanyaan</h6></p>
+</div>
+
+<div class="container">
+
+<div class="row">
+
+<!-- INFO KONTAK -->
+<div class="col s12 m5">
+
+<h5 class="section-title">Informasi Kontak</h5>
+
+<div class="contact-box">
+<p><i class="material-icons left">person</i> Ferdinand Andreas Saputra</p>
+</div>
+
+<div class="contact-box">
+<p><i class="material-icons left">school</i> Politeknik Negeri Madiun</p>
+</div>
+
+<div class="contact-box">
+<p><i class="material-icons left">email</i> ferdinand@email.com</p>
+</div>
+
+<div class="contact-box">
+<p><i class="material-icons left">phone</i> 0898-3547-925</p>
+</div>
+
+<div class="contact-box">
+<p><i class="material-icons left">location_on</i> Madiun, Jawa Timur</p>
+</div>
+
+<div class="section-title">Social Media</div>
+
+<div class="center social-icon">
+
+<a href="https://www.instagram.com/frrdptraa_?igsh=a21uMHp2dXB5eXBi" target="_blank">
+<i class="material-icons medium">photo_camera</i>
+</a>
+
+<a href="https://github.com/FerdinandAndreas/dpw.git" target="_blank">
+<i class="material-icons medium">code</i>
+</a>
+
+<a href="https://www.linkedin.com/in/ferdinand-andreas-saputra-16b87b380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+<i class="material-icons medium">business</i>
+</a>
+
+<a href="mailto:email@gmail.com">
+<i class="material-icons medium">email</i>
+</a>
+
+</div>
+
+</div>
+
+<!-- FORM -->
+<div class="col s12 m7">
+
+<h5 class="section-title">Kirim Pesan</h5>
+
+<div class="card">
+<div class="card-content">
+
+<form>
+
+<div class="input-field">
+<i class="material-icons prefix">person</i>
+<input type="text" id="nama">
+<label for="nama">Nama</label>
+</div>
+
+<div class="input-field">
+<i class="material-icons prefix">email</i>
+<input type="email" id="email">
+<label for="email">Email</label>
+</div>
+
+<div class="input-field">
+<i class="material-icons prefix">subject</i>
+<input type="text" id="subject">
+<label for="subject">Subjek</label>
+</div>
+
+<div class="input-field">
+<i class="material-icons prefix">message</i>
+<textarea id="pesan" class="materialize-textarea"></textarea>
+<label for="pesan">Pesan</label>
+</div>
+
+<div class="center">
+<button class="btn darkblue darken-3">
+<i class="material-icons left">send</i>
+Kirim Pesan
+</button>
+</div>
+
+</form>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+<p>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Layanan</a>
+<a href="contact.html">Contact</a>
+</p>
+
+<p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+&copy; 2025 Materialize | Dibuat dengan Materialize CSS | Ferdinand Ganteng - 253307027
+</p>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+M.AutoInit();
+});
+</script>
+
+</body>
+</html>

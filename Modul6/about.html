@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Belajar Materialize CSS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        nav { background-color: #3e1458; }
+
+        .page-header {
+            background: linear-gradient(135deg, #5a3f6a, #715b75);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .page-header h2 { font-weight: bold; }
+
+        .section-title {
+            color: #6a1b9a;
+            font-weight: bold;
+            margin: 30px 0 16px;
+        }
+
+        .profile-card {
+            border-radius: 12px;
+        }
+        .profile-card .card-image img {
+            border-radius: 12px 12px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+        .skill-chip {
+            display: inline-block;
+            background-color: #e1bee7;
+            color: #6a1b9a;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .timeline-item {
+            border-left: 4px solid #6a1b9a;
+            padding: 10px 20px;
+            margin-bottom: 16px;
+            background-color: #f3e5f5;
+            border-radius: 0 8px 8px 0;
+        }
+        .timeline-item h6 { color: #6a1b9a; font-weight: bold; margin: 0; }
+        .timeline-item p  { margin: 4px 0 0; font-size: 14px; color: #555; }
+
+        footer {
+            background-color: #3e1458;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a { color: #e1bee7; margin: 0 12px; text-decoration: none; }
+
+        .identitas {
+            background-color: #f3e5f5;
+            border-left: 4px solid #6a1b9a;
+            padding: 10px 16px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        </style>
+        
+    </head>
+    <body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <i class="material-icons">web</i> Materialize
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="about.html" class="active"><i class="material-icons left">info</i>About</a></li>
+                <li><a href="portfolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+                 <li><a href="service.html"><i class="material-icons left">build</i>Layanan</a></li>
+                <li><a href="contact.html"><i class="material-icons left">mail</i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="page-header">
+        <h2><i class="material-icons large">info</i><br>About me</h2>
+        <p><h6>Kenali lebih dekat tentang diri saya</h6></p>
+    </div>
+
+    <!-- ══ PROFIL ══ -->
+        <div class="row" style="margin-top: 10px;">
+
+            <!-- Foto & Identitas -->
+            <div class="col s12 m4">
+                <div class="card profile-card hoverable center-align">
+                    <div class="card-content">
+                        <img src="./Image/About me.jpeg" alt="Foto Ferdinand" 
+                        style="width:120px; height:120px; border-radius:50%; object-fit:cover;">
+                        <span class="card-title purple-text text-darken-3">Ferdinand Ganteng</span>
+                        <p class="grey-text">NIM : 253307027</p>
+                        <p class="grey-text">Program Studi Teknologi Informasi</p>
+                        <br>
+                        <div>
+                            <span class="skill-chip">HTML</span>
+                            <span class="skill-chip">CSS</span>
+                            <span class="skill-chip">JavaScript</span>
+                            <span class="skill-chip">Materialize</span>
+                            <span class="skill-chip">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="contact.html" class="purple-text"><strong>Hubungi Saya</strong></a>
+                    </div>
+                </div>
+            </div>
+
+<!-- Deskripsi diri -->
+            <div class="col s12 m8">
+                <h5 class="section-title">Tentang diri saya</h5>
+                <p>Nama saya adalah Ferdinand Andreas Saputra. Saya adalah seorang mahasiswa Politeknik Negeri Madiun
+                Program Studi Teknologi Informasi saya alumni dari SMAN 1 Kawedanan jurusan IPA. Website ini adalah 
+                sebuah tugas mata kuliah Pemrograman Web, dalam tugas ini saya menggunakan framework css yang bernama Materialize.</p>
+
+                <p style="margin-top: 10px;">Dengan menggunakan framework Materialize, pembuatan website menjadi lebih cepat dan
+                terstruktur karena kita cukup menggunakan class-class yang sudah tersedia tanpa
+                perlu menulis CSS dari nol.</p>
+
+                <h5 class="section-title">Riwayat Belajar</h5>
+                <div class="timeline-item">
+                    <h6>HTML Dasar</h6>
+                    <p>Mempelajari struktur dasar HTML dan tag-tag umum HTML</p>
+                </div>
+                <div class="timeline-item">
+                    <h6>CSS & Box Model</h6>
+                    <p>Mempelajari CSS, Box Model, selector, dan cara styling elemen HTML</p>
+                </div>
+                <div class="timeline-item">
+                    <h6>Flexbox & Grid</h6>
+                    <p>Mempelajari sistem layout modern dengan CSS Flexbox dan CSS Grid</p>
+                </div>
+                <div class="timeline-item">
+                    <h6>CSS Framework (Materialize)</h6>
+                    <p>Mempelajari dan menerapkan Materialize CSS untuk membangun website yang responsif dan modern</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--alasan memilih materialize-->
+    <div style="background-color: #f3e5f5; padding: 40px 0; margin-top: 20px;">
+        <div class="container">
+            <h4 class="section-title center-align">Mengapa saya memilih Materialize CSS?</h4>
+            <div class="row">
+                <div class="col s12 m4 center-align">
+                    <i class="material-icons large purple-text">speed</i>
+                    <h6 class="purple-text text-darken-3">Cepat</h6>
+                    <p>Komponen sudah siap digunakan tidak perlu memulai dari nol</p>
+                </div>
+                <div class="col s12 m4 center-align">
+                    <i class="material-icons large purple-text">devices</i>
+                    <h6 class="purple-text text-darken-3">Responsif</h6>
+                    <p>Otomatis menyesuaikan tampilan di mobile, tablet, dan desktop pengguna</p>
+                </div>
+                <div class="col s12 m4 center-align">
+                    <i class="material-icons large purple-text">style</i>
+                    <h6 class="purple-text text-darken-3">Modern</h6>
+                    <p>Tampilan mengikuti panduan Material Design dari Google</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service.html">Layanan</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+            &copy; 2025 Materialize | Dibuat dengan Materialize CSS | Ferdinand Ganteng - 253307027
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+</body>
+</html>

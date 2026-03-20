@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Belajar Materialize CSS</title>
+
+    <!-- Materialize CSS dari CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        nav { background-color: #1d4778; }
+        nav ul a { color: white; }
+
+        .hero-section {
+            background: linear-gradient(135deg, #415a75, #a7baca);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-weight: bold;
+            color: #101b42;
+        }
+         footer {
+            background-color: #1d4778;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #bbdefb;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+        footer a:hover { color: white; }
+    
+    </style>
+        
+</head>
+<body>
+
+     <!-- NAVBAR -->
+     <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <i class="material-icons">web</i> Materialize
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="about.html"><i class="material-icons left">info</i>About</a></li>
+                <li><a href="portfolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+                <li><a href="service.html"><i class="material-icons left">build</i>Layanan</a></li>
+                <li><a href="contact.html"><i class="material-icons left">mail</i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>Hallo nama saya Ferdinand ganteng</h1>
+            <p>Website ini saya buat menggunakan Materialize CSS Framework</p>
+        </div>
+    </div>
+
+     <!-- PROFILE -->
+    <div class="container" style="margin: 40px auto;">
+        <h4 class="section-title">Profile Saya</h4>
+
+        <!-- Card Layout Baris pertama -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card-panel teal darken-3 white-text center-align hoverable" style="border-radius:8px;">
+                    <i class="material-icons large">home</i>
+                    <h6>Home</h6>
+                    <p>Halaman utama website Saya</p>
+                    <a href="index.html" class="btn white teal-text">Buka</a>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card-panel indigo darken-3 white-text center-align hoverable" style="border-radius:8px;">
+                    <i class="material-icons large">info</i>
+                    <h6>About</h6>
+                    <p>Mengenal lebih dekat tentang saya</p>
+                    <a href="about.html" class="btn white indigo-text">Buka</a>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card-panel deep-orange darken-3 white-text center-align hoverable" style="border-radius:8px;">
+                    <i class="material-icons large">work</i>
+                    <h6>Portofolio</h6>
+                    <p>Proyek yang telah saya kerjakan</p>
+                    <a href="portfolio.html" class="btn white deep-orange-text">Buka</a>
+                </div>
+            </div>
+        </div>
+
+            <!-- Card Layout Baris kedua -->
+        <div class="row">
+            <div class="col s12 m4 offset-m2">
+                <div class="card-panel blue darken-3 white-text center-align hoverable" style="border-radius:8px;">
+                    <i class="material-icons large">build</i>
+                    <h6>Layanan</h6>
+                    <p>beberapa jasa yang bisa saya tawarkan</p>
+                    <a href="service.html" class="btn white blue-text">Buka</a>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card-panel green darken-3 white-text center-align hoverable" style="border-radius:8px;">
+                    <i class="material-icons large">mail</i>
+                    <h6>Contact</h6>
+                    <p>Hubungi saya untuk informasi lanjut</p>
+                    <a href="contact.html" class="btn white green-text">Buka</a>
+                </div>
+            </div>
+        </div>
+     </div> 
+
+     <footer>
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service.html">Layanan</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+            &copy; 2025 Materialize | Dibuat dengan Materialize CSS | Ferdinand Ganteng - 253307027
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+    

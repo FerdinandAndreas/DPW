@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Belajar Materialize CSS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        nav { background-color: #55562c; }
+
+        .page-header {
+            background: linear-gradient(135deg, #7b8d51, #a7ae69);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .page-header h2 { font-weight: bold; }
+
+        .section-title {
+            color: #424a1b;
+            font-weight: bold;
+            margin: 30px 0 16px;
+            text-align: center;
+        }
+
+        /* Filter tabs */
+        .filter-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .filter-bar .btn {
+            margin: 4px;
+            border-radius: 20px;
+        }
+
+        /* Card proyek */
+        .project-card {
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+        .project-card .card-image {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .project-card .card-image i {
+            font-size: 80px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #dce489;
+            color: #6a6434;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin: 2px;
+            font-weight: bold;
+        }
+
+        /* Stats */
+        .stat-box {
+            text-align: center;
+            padding: 30px 10px;
+        }
+        .stat-box h3 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #524f1c;
+            margin: 0;
+        }
+        .stat-box p { color: #666; margin: 4px 0 0; }
+
+        footer {
+            background-color: #7c7732;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a { color: #ffffff; margin: 0 12px; text-decoration: none; }
+
+    </style>
+</head>
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <i class="material-icons">web</i> Materialize
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="about.html"><i class="material-icons left">info</i>About</a></li>
+                <li><a href="portfolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+                 <li><a href="service.html"><i class="material-icons left">build</i>Layanan</a></li>
+                <li><a href="contact.html"><i class="material-icons left">mail</i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <div class="page-header">
+        <h2><i class="material-icons large">work</i><br>Portofolio</h2>
+        <p><h6>Beberapa proyek dan hasil karya yang telah saya buat</h6></p>
+    </div>
+
+    
+    <!-- ══ STATISTIK ══ -->
+    <div style="background-color: #e7e4df; padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m3">
+                    <div class="stat-box">
+                        <h3>8</h3>
+                        <p>Total Proyek</p>
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="stat-box">
+                        <h3>5</h3>
+                        <p>Website</p>
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="stat-box">
+                        <h3>4</h3>
+                        <p>Desain UI</p>
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="stat-box">
+                        <h3>1</h3>
+                        <p>Aplikasi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ PROYEK / CARD GRID ══ -->
+    <div class="container">
+        <h4 class="section-title">Proyek Saya</h4>
+
+        <div class="row">
+
+            <div class="col s12 m6 l4">
+                <div class="card project-card hoverable">
+                    <div class="card-image" style="background: linear-gradient(135deg,#1565c0,#42a5f5);">
+                        <i class="material-icons">language</i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Website Toko Online</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Materialize</span>
+                        <p style="margin-top:8px; font-size:13px;">Website toko online sederhana dengan halaman produk, keranjang, dan checkout.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="orange-text text-darken-3">Demo</a>
+                        <a href="#" class="orange-text text-darken-3">Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card project-card hoverable">
+                    <div class="card-image" style="background: linear-gradient(135deg,#2e7d32,#66bb6a);">
+                        <i class="material-icons">dashboard</i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Dashboard Admin</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS Grid</span>
+                        <span class="tag">JavaScript</span>
+                        <p style="margin-top:8px; font-size:13px;">Halaman dashboard admin dengan tabel data, grafik, dan statistik pengguna.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="orange-text text-darken-3">Demo</a>
+                        <a href="#" class="orange-text text-darken-3">Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card project-card hoverable">
+                    <div class="card-image" style="background: linear-gradient(135deg,#6a1b9a,#ab47bc);">
+                        <i class="material-icons">photo_library</i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Galeri Foto Flexbox</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS Flexbox</span>
+                        <p style="margin-top:8px; font-size:13px;">Galeri foto responsif 18 item menggunakan CSS Flexbox dengan layout grid.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="orange-text text-darken-3">Demo</a>
+                        <a href="#" class="orange-text text-darken-3">Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card project-card hoverable">
+                    <div class="card-image" style="background: linear-gradient(135deg,#c62828,#ef5350);">
+                        <i class="material-icons">phone_android</i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Landing Page Mobile</span>
+                        <span class="tag">Materialize</span>
+                        <span class="tag">Responsive</span>
+                        <p style="margin-top:8px; font-size:13px;">Landing page produk aplikasi mobile dengan desain modern dan responsif.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="orange-text text-darken-3">Demo</a>
+                        <a href="#" class="orange-text text-darken-3">Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card project-card hoverable">
+                    <div class="card-image" style="background: linear-gradient(135deg,#00695c,#26a69a);">
+                        <i class="material-icons">school</i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Web Profil Sekolah</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Bootstrap</span>
+                        <p style="margin-top:8px; font-size:13px;">Website profil sekolah dengan halaman berita, galeri, dan jadwal pelajaran.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="orange-text text-darken-3">Demo</a>
+                        <a href="#" class="orange-text text-darken-3">Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card project-card hoverable">
+                    <div class="card-image" style="background: linear-gradient(135deg,#4527a0,#7e57c2);">
+                        <i class="material-icons">view_quilt</i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Layout CSS Grid</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS Grid</span>
+                        <p style="margin-top:8px; font-size:13px;">Eksperimen layout dengan CSS Grid: grid-template, grid-gap, grid-area, dan spanning.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="orange-text text-darken-3">Demo</a>
+                        <a href="#" class="orange-text text-darken-3">Source</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service.html">Layanan</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+            &copy; 2025 Materialize | Dibuat dengan Materialize CSS | Ferdinand Ganteng - 253307027
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flex Box</title>
+    
+
+    <style>
+        /* ===== SKENARIO 1 ===== */
+        .wadah-flex-s-1 {
+           
+            display: flex;
+            background-color: #97e1ae;
+        }
+    </style>
+    
+    <style>
+
+        /* ===== SKENARIO 2 ===== */
+        .wadah-flex-s-2 > div {
+            background-color: #6cd0bc;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            color: white;
+        }
+
+        .wadah-flex {
+            justify-content: space-around; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h2 {
+            background-color: #1b706f;
+            color: white;
+            padding: 8px 14px;
+        }
+
+        p.kesimpulan {
+            background-color: #dedede;
+            border-left: 4px solid #0a6c3e;
+            padding: 10px 14px;
+            margin: 10px 0 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Skenario 1 - display: flex</h2>
+    <div class="wadah-flex-s-1" >
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p class="kesimpulan">Kesimpulan skenario 1 adalah : Dengan menerapkan <strong>display: flex</strong> pada elemen wadah, semua elemen anak akan berubah menjadi flex item dan secara default tersusun dalam satu baris (horizontal).</p>
+
+    <h2>Skenario 2 - Style pada div anak</h2>
+    <div class="wadah-flex-s-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p class="kesimpulan">Kesimpulan skenario 2 adalah : Dengan memberi style seperti background-color, margin, padding, dan font-size pada div anak dari class wadah-flex, tampilan setiap item flex menjadi lebih terstruktur dan mudah dibedakan satu sama lain.</p>
+
+    <h2>Skenario 3 - flex-direction</h2>
+    <style>
+        .skenario3 {
+            display: flex;
+            background-color: #6dbac9;
+            flex-direction: row;  
+        }
+        .skenario3 > div {
+            background-color: #26679c;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+    <div class="skenario3">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p class="kesimpulan">Kesimpulan skenario 3 adalah : Properti <strong>flex-direction</strong> digunakan untuk menenentukan arah susunan item flex. Nilai <em>row</em> menyusun item secara horizontal , <em>column</em> menyusunnya secara vertikal, sedangkan <em>row-reverse</em> dan <em>column-reverse</em> membalik urutan arah susunan tersebut.</p>
+
+    <h2>Skenario 4 - flex-wrap</h2>
+    <style>
+        .skenario4 {
+            display: flex;
+            background-color: #cc96bc;
+            flex-wrap: wrap; 
+        }
+        .skenario4 > div {
+            background-color: #c33866;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+    <div class="skenario4">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p class="kesimpulan">Kesimpulan skenario 4 adalah : Properti <strong>flex-wrap</strong> mengatur apakah item flex akan tetap dalam satu baris atau berpindah ke baris baru jika tidak cukup ruang. Nilai <em>wrap</em> memungkinkan item turun ke baris berikutnya, sedangkan <em>nowrap</em> memaksa semua item tetap dalam satu baris meski melebihi lebar wadah.</p>
+
+    <h2>Skenario 5 - flex-flow</h2>
+    <style>
+        .skenario5 {
+            display: flex;
+            background-color: #e9ebbc;
+            flex-flow: row wrap;
+            
+        }
+        .skenario5 > div {
+            background-color: #827e31;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+    <div class="skenario5">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p class="kesimpulan">Kesimpulan skenario 5 adalah : Properti <strong>flex-flow</strong> merupakan shorthand (singkatan) dari flex-direction dan flex-wrap sekaligus. Contohnya <em>flex-flow: row wrap</em> berarti item disusun secara horizontal dan akan berpindah baris jika tidak cukup ruang.</p>
+
+    <h2>Skenario 6 - justify-content</h2>
+    <style>
+        .skenario6 {
+            display: flex;
+            background-color: #addfad;
+            justify-content: space-evenly; 
+        }
+
+        .skenario6 > div {
+            background-color: #60a15e;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+    <div class="skenario6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p class="kesimpulan">Kesimpulan skenario 6 adalah : Properti <strong>justify-content</strong> digunakan untuk mengatur posisi/distribusi item flex secara horizontal di dalam wadah. Nilai seperti <em>flex-start</em> menempatkan item di kiri, <em>center</em> di tengah, <em>space-between</em> memberi jarak antar item, dan <em>space-around</em> memberi jarak merata di sekeliling setiap item.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
