@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Confirm Box</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Ferdinand Andreas Saputra">
+<meta name="nim" content="253307027">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #1f2c76;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+  min-height: 400px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 8px;
+}
+
+nav a:hover {
+  background: #b5b5b5;
+  color: #215E61;
+  font-weight: bold;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  min-height: 590px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1f2c76;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #17494b;
+}
+
+.output {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #215E61;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width:600px) {
+  nav, article {
+    width:100%;
+    height:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>JAVA SCRIPT</h2>
+</header>
+
+<section>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="alert.html">Alert</a></li>
+<li><a href="input_data.html">Input Data</a></li>
+<li><a href="confirm_box.html">Confirm Box</a></li>
+<li><a href="validasi.html">Validasi</a></li>
+<li><a href="radio_box.html">Radio Box</a></li>
+<li><a href="verifikasi_password.html">Password</a></li>
+<li><a href="realtime_date.html">Jam</a></li>
+<li><a href="ajax.html">Ajax</a></li>
+<li><a href="jquery.html">Jquery</a></li>
+<li><a href="dialog_box.html">Dialog</a></li>
+<li><a href="dialog_download.html">Download</a></li>
+</ul>
+</nav>
+
+<article>
+<h1>Confirm Box</h1>
+<p>Program ini menggunakan <b>confirm()</b> untuk meminta pilihan dari pengguna</p>
+
+<button onclick="myFunction()">Klik Ini</button>
+
+<div class="output" id="demo"></div>
+
+</article>
+
+</section>
+
+<footer>
+<p><i>copyright@Ferdinand Andreas Saputra_253307027_2026</i></p>
+</footer>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Apakah Anda akan logout?")) {
+    txt = "Anda mengklik OK";
+  } else {
+    txt = "Anda mengklik Cancel";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

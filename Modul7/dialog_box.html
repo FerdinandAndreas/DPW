@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dialog Box</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial; }
+
+header {
+  background: #1f2c76;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+  min-height: 400px;
+}
+
+nav ul { list-style: none; padding: 0; }
+nav li { margin-bottom: 10px; }
+
+nav a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  background: #b5b5b5;
+}
+
+article {
+  float: left;
+  width: 70%;
+  padding: 20px;
+  background: #f1f1f1;
+  min-height: 590px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #1f2c76;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #17494b;
+}
+
+/* DIALOG */
+.dialog {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  width: 300px;
+  background: white;
+  border: 2px solid #215E61;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+section::after { content: ""; display: table; clear: both; }
+
+footer {
+  background: #777;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $("#openDialog").click(function(){
+    $(".overlay").show();
+    $(".dialog").show();
+  });
+
+  $("#closeDialog").click(function(){
+    $(".overlay").hide();
+    $(".dialog").hide();
+  });
+});
+</script>
+
+</head>
+
+<body>
+
+<header><h2>JAVA SCRIPT</h2></header>
+
+<section>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="alert.html">Alert</a></li>
+<li><a href="input_data.html">Input Data</a></li>
+<li><a href="confirm_box.html">Confirm Box</a></li>
+<li><a href="validasi.html">Validasi</a></li>
+<li><a href="radio_box.html">Radio Box</a></li>
+<li><a href="verifikasi_password.html">Password</a></li>
+<li><a href="realtime_date.html">Jam</a></li>
+<li><a href="ajax.html">Ajax</a></li>
+<li><a href="jquery.html">Jquery</a></li>
+<li><a href="dialog_box.html">Dialog</a></li>
+<li><a href="dialog_download.html">Download</a></li>
+</ul>
+</nav>
+
+<article>
+<h1>Basic Dialog</h1>
+
+<button id="openDialog">Buka Dialog</button>
+
+<div class="overlay"></div>
+
+<div class="dialog">
+  <p>Ini adalah dialog sederhana</p>
+  <button id="closeDialog">Tutup</button>
+</div>
+
+</article>
+
+</section>
+
+<footer>
+<p><i>copyright@Ferdinand Andreas Saputra_253307027_2026</i></p>
+</footer>
+
+</body>
+</html>

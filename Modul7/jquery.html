@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Menu jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+* { box-sizing: border-box; }
+
+body { margin: 0; font-family: Arial; }
+
+header {
+  background-color: #1f2c76;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+  min-height: 400px;
+}
+
+nav ul { list-style: none; padding: 0; }
+
+nav li { margin-bottom: 10px; }
+
+nav a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  background: #b5b5b5;
+}
+
+article {
+  float: left;
+  width: 70%;
+  padding: 20px;
+  background: #f1f1f1;
+  min-height: 590px;
+}
+
+.menu {
+  background: #215E61;
+  padding: 10px;
+}
+
+.menu button {
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  background: #17494b;
+  border: none;
+}
+
+.content {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+}
+
+section::after { content: ""; display: table; clear: both; }
+
+footer {
+  background: #777;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#isi").text("Ini halaman Home");
+  });
+
+  $("#btn2").click(function(){
+    $("#isi").text("Ini halaman Profil");
+  });
+
+  $("#btn3").click(function(){
+    $("#isi").text("Ini halaman Kontak");
+  });
+});
+</script>
+
+</head>
+
+<body>
+
+<header><h2>JAVA SCRIPT</h2></header>
+
+<section>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="alert.html">Alert</a></li>
+<li><a href="input_data.html">Input Data</a></li>
+<li><a href="confirm_box.html">Confirm Box</a></li>
+<li><a href="validasi.html">Validasi</a></li>
+<li><a href="radio_box.html">Radio Box</a></li>
+<li><a href="verifikasi_password.html">Password</a></li>
+<li><a href="realtime_date.html">Jam</a></li>
+<li><a href="ajax.html">Ajax</a></li>
+<li><a href="jquery.html">Jquery</a></li>
+<li><a href="dialog_box.html">Dialog</a></li>
+<li><a href="dialog_download.html">Download</a></li>
+</ul>
+</nav>
+
+<article>
+<h1>Menu jQuery</h1>
+
+<div class="menu">
+  <button id="btn1">Home</button>
+  <button id="btn2">Profil</button>
+  <button id="btn3">Kontak</button>
+</div>
+
+<div class="content" id="isi">
+  Klik menu di atas
+</div>
+
+</article>
+
+</section>
+
+<footer>
+<p><i>copyright@Ferdinand Andreas Saputra_253307027_2026</i></p>
+</footer>
+
+</body>
+</html>
