@@ -26,6 +26,12 @@
     <ul class="navbar-nav">
 
         <li>
+            <a href="index.php">
+                Beranda
+            </a>
+        </li>
+
+        <li>
             <a href="viewdosen.php">
                 Dosen
             </a>

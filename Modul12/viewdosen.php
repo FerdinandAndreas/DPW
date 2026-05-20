@@ -1,4 +1,4 @@
-<?php include 'koneksi.php'; ?>
+<?php require_once 'koneksi.php'; ?>
 
 <!DOCTYPE html>
 <html lang="id">
@@ -33,7 +33,7 @@
                 Beranda
             </a>
         </li>
-        
+
         <li>
             <a href="viewdosen.php" class="active">
                 Dosen
@@ -107,37 +107,34 @@
 
             <?php
 
-            $keyword = isset($_GET['keyword']) 
-                ? mysqli_real_escape_string($link, $_GET['keyword']) 
-                : '';
+            $keyword = isset($_GET['keyword']) ? trim($_GET['keyword']) : '';
 
-            if($keyword !== ''){
+            if ($keyword !== '') {
 
-                $query = "SELECT * FROM t_dosen
-                          WHERE namaDosen LIKE '%$keyword%'
-                          ORDER BY idDosen ASC";
+            
+                $stmt = $db->prepare(
+                    "SELECT * FROM t_dosen
+                     WHERE namaDosen LIKE ?
+                     ORDER BY idDosen ASC"
+                );
 
-            }else{
+                $like = "%" . $keyword . "%";
+                $stmt->bind_param("s", $like);
 
-                $query = "SELECT * FROM t_dosen
-                          ORDER BY idDosen ASC";
-            }
+            } else {
 
-            $result = mysqli_query($link, $query);
-
-            if(!$result){
-
-                die(
-                    "<div class='alert alert-danger'>
-                        Query Error :
-                        " . mysqli_errno($link) . "
-                        -
-                        " . mysqli_error($link) . "
-                    </div>"
+                $stmt = $db->prepare(
+                    "SELECT * FROM t_dosen
+                     ORDER BY idDosen ASC"
                 );
             }
 
-            $total = mysqli_num_rows($result);
+           
+            $stmt->execute();
+
+            
+            $result = $stmt->get_result();
+            $total  = $result->num_rows;
 
             ?>
 
@@ -195,7 +192,7 @@
 
                     <?php else: ?>
 
-                        <?php while($data = mysqli_fetch_assoc($result)): ?>
+                        <?php while($data = $result->fetch_assoc()): ?>
 
                         <tr>
 

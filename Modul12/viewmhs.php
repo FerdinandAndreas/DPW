@@ -1,4 +1,4 @@
-<?php include 'koneksi.php'; ?>
+<?php require_once 'koneksi.php'; ?>
 
 <!DOCTYPE html>
 <html lang="id">
@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data Dosen</title>
+<title>Data Mahasiswa</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -33,15 +33,15 @@
                 Beranda
             </a>
         </li>
-        
+
         <li>
-            <a href="viewdosen.php" class="active">
+            <a href="viewdosen.php">
                 Dosen
             </a>
         </li>
 
         <li>
-            <a href="viewmhs.php">
+            <a href="viewmhs.php" class="active">
                 Mahasiswa
             </a>
         </li>
@@ -59,33 +59,33 @@
 <div class="container">
 
     <h1 class="page-title">
-        Data Dosen
+         Data Mahasiswa
     </h1>
 
     <div class="card">
 
         <div class="card-header">
-            Daftar Dosen
+            Daftar Mahasiswa
         </div>
 
         <div class="card-body">
 
             <div class="topbar">
 
-                <a href="input.php" class="btn btn-primary">
-                    + Tambah Dosen
+                <a href="inputmhs.php" class="btn btn-primary">
+                    + Tambah Mahasiswa
                 </a>
 
                 <form 
                     class="search-form"
                     method="get"
-                    action="viewdosen.php"
+                    action="viewmhs.php"
                 >
 
                     <input 
                         type="text"
                         name="keyword"
-                        placeholder="Cari nama dosen..."
+                        placeholder="Cari nama mahasiswa..."
                         value="<?php echo isset($_GET['keyword']) ? htmlspecialchars($_GET['keyword']) : ''; ?>"
                     >
 
@@ -95,8 +95,8 @@
 
                     <?php if(isset($_GET['keyword']) && $_GET['keyword'] !== ''): ?>
 
-                        <a href="viewdosen.php" class="btn btn-warning">
-                            ✕ Reset
+                        <a href="viewmhs.php" class="btn btn-warning">
+                            Reset
                         </a>
 
                     <?php endif; ?>
@@ -107,37 +107,31 @@
 
             <?php
 
-            $keyword = isset($_GET['keyword']) 
-                ? mysqli_real_escape_string($link, $_GET['keyword']) 
-                : '';
+            $keyword = isset($_GET['keyword']) ? trim($_GET['keyword']) : '';
 
-            if($keyword !== ''){
+            if ($keyword !== '') {
 
-                $query = "SELECT * FROM t_dosen
-                          WHERE namaDosen LIKE '%$keyword%'
-                          ORDER BY idDosen ASC";
+                
+                $stmt = $db->prepare(
+                    "SELECT * FROM t_mahasiswa
+                     WHERE namaMhs LIKE ?
+                     ORDER BY npm ASC"
+                );
 
-            }else{
+                $like = "%" . $keyword . "%";
+                $stmt->bind_param("s", $like);
 
-                $query = "SELECT * FROM t_dosen
-                          ORDER BY idDosen ASC";
-            }
+            } else {
 
-            $result = mysqli_query($link, $query);
-
-            if(!$result){
-
-                die(
-                    "<div class='alert alert-danger'>
-                        Query Error :
-                        " . mysqli_errno($link) . "
-                        -
-                        " . mysqli_error($link) . "
-                    </div>"
+                $stmt = $db->prepare(
+                    "SELECT * FROM t_mahasiswa
+                     ORDER BY npm ASC"
                 );
             }
 
-            $total = mysqli_num_rows($result);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $total  = $result->num_rows;
 
             ?>
 
@@ -163,8 +157,10 @@
                         <tr>
 
                             <th>No</th>
-                            <th>ID</th>
-                            <th>Nama Dosen</th>
+                            <th>NPM</th>
+                            <th>Nama Mahasiswa</th>
+                            <th>Program Studi</th>
+                            <th>Alamat</th>
                             <th>No HP</th>
                             <th>Aksi</th>
 
@@ -184,9 +180,9 @@
 
                         <tr>
 
-                            <td colspan="5" class="empty-state">
+                            <td colspan="7" class="empty-state">
 
-                                Tidak ada data dosen
+                                Tidak ada data mahasiswa
                                 <?php echo $keyword ? ' yang cocok' : ''; ?>.
 
                             </td>
@@ -195,7 +191,7 @@
 
                     <?php else: ?>
 
-                        <?php while($data = mysqli_fetch_assoc($result)): ?>
+                        <?php while($data = $result->fetch_assoc()): ?>
 
                         <tr>
 
@@ -204,11 +200,19 @@
                             </td>
 
                             <td>
-                                <?php echo $data['idDosen']; ?>
+                                <?php echo $data['npm']; ?>
                             </td>
 
                             <td>
-                                <?php echo htmlspecialchars($data['namaDosen']); ?>
+                                <?php echo htmlspecialchars($data['namaMhs']); ?>
+                            </td>
+
+                            <td>
+                                <?php echo htmlspecialchars($data['prodi']); ?>
+                            </td>
+
+                            <td>
+                                <?php echo htmlspecialchars($data['alamat']); ?>
                             </td>
 
                             <td>
@@ -220,14 +224,14 @@
                                 <div class="action-links">
 
                                     <a 
-                                        href="editdosen.php?idDosen=<?php echo $data['idDosen']; ?>"
+                                        href="editmhs.php?npm=<?php echo $data['npm']; ?>"
                                         class="btn btn-warning btn-sm"
                                     >
-                                    Edit
+                                        Edit
                                     </a>
 
                                     <a 
-                                        href="hapusdosen.php?idDosen=<?php echo $data['idDosen']; ?>"
+                                        href="hapusmhs.php?npm=<?php echo $data['npm']; ?>"
                                         class="btn btn-danger btn-sm"
                                         onclick="return confirm('Yakin ingin menghapus data ini?')"
                                     >
